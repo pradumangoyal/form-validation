@@ -66,7 +66,7 @@ return true;
    
     var email = document.getElementById("email").value;
 
-    var eregex=/^([\w-]+(\.[\w-]+)*)@(([\w-]+\.)*\w[\w-])\.([a-z](\.[a-z]{2})?)$/i;
+    var eregex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,})\.([a-z]{2,}(?:\.[a-z]{2})?)$/i;
     if(!eregex.test(email))
     {
     	    	document.getElementById("email-error").innerHTML = "*Please Enter a Valid Email-ID";

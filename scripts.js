@@ -3,10 +3,10 @@ function eduval() {
     var x = document.getElementById("edu").value;
     if(x==="default")
     {
-    	    	document.getElementById("edu-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Choose a Qualification";
+    	    	document.getElementById("edu-error").innerHTML = "*Please Choose a Qualification";
     return false;
     }else{
-    	    	document.getElementById("edu-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("edu-error").innerHTML = "";
 return true;
     }
 
@@ -18,11 +18,11 @@ return true;
     var pregex=/^(0|91|\+91){0,1}[\-\s\.]{0,1}[7-9]{1}[0-9]{4}[-\s\.]{0,1}[0-9]{5}$/;
     if(!pregex.test(phone))
     {
-    	    	document.getElementById("phone-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter a Valid Phone Number";
+    	    	document.getElementById("phone-error").innerHTML = "*Please Enter a Valid Phone Number";
     return false;
     }
     else{
-    	    	document.getElementById("phone-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("phone-error").innerHTML = "";
 return true;
     }
 
@@ -35,11 +35,11 @@ return true;
     var ageregex=/^[0-9]{1}[1-9]{1}$/;
     if(!ageregex.test(age))
     {
-    	    	document.getElementById("age-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter a Valid Age";
+    	    	document.getElementById("age-error").innerHTML = "*Please Enter a Valid Age";
     	    	return false;
     }
     else{
-    	    	document.getElementById("age-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("age-error").innerHTML = "";
 return true;
     }
 
@@ -52,11 +52,11 @@ return true;
     var genregex=/^(male|female)$/;
     if(!genregex.test(gen))
     {
-    	    	document.getElementById("gender-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter Your Gender";
+    	    	document.getElementById("gender-error").innerHTML = "*Please Enter Your Gender";
     	    	return false;
     }
     else{
-    	    	document.getElementById("gender-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("gender-error").innerHTML = "";
 return true;
     }
 
@@ -69,11 +69,11 @@ return true;
     var eregex=/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,})\.([a-z]{2,}(?:\.[a-z]{2})?)$/i;
     if(!eregex.test(email))
     {
-    	    	document.getElementById("email-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter a Valid Email-ID";
+    	    	document.getElementById("email-error").innerHTML = "*Please Enter a Valid Email-ID";
     return false;
     }
     else{
-    	    	document.getElementById("email-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("email-error").innerHTML = "";
 return true;
     }
 
@@ -84,7 +84,7 @@ return true;
     	var pass=document.getElementById("pwd").value;
     	if(pass!=="")
     	{
-    		document.getElementById("pwd-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    		document.getElementById("pwd-error").innerHTML = "";
     	}
 
     }
@@ -93,14 +93,14 @@ return true;
     	var pass=document.getElementById("pwd").value;
     	var repass=document.getElementById("r-pwd").value;
     	if(pass==""){
-    		document.getElementById("pwd-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter a Password";
+    		document.getElementById("pwd-error").innerHTML = "*Please Enter a Password";
     	}
     	else if(pass!==repass){
     		document.getElementById("rpwd-error").innerHTML = "*Password Doesn't Match";
     	}
     	else{
-    		    		document.getElementById("pwd-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
-    		    		document.getElementById("rpwd-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    		    		document.getElementById("pwd-error").innerHTML = "";
+    		    		document.getElementById("rpwd-error").innerHTML = "";
     	}
     }
  
@@ -110,11 +110,11 @@ function nameval() {
     var nameregex=/^[A-Za-z\s]{1,}$/i;
     if(!nameregex.test(name))
     {
-    	    	document.getElementById("name-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter a Valid Name";
+    	    	document.getElementById("name-error").innerHTML = "*Please Enter a Valid Name";
     return false;
     }
     else{
-    	    	document.getElementById("name-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("name-error").innerHTML = "";
 return true;
     }
 
@@ -126,11 +126,11 @@ return true;
     var nameregex=/^[A-Za-z\s]{1,}$/i;
     if(!nameregex.test(name))
     {
-    	    	document.getElementById("city-error").innerHTML = "<img src='./wrong.png' style='width: 20px; height: 20px;'>Please Enter a Valid City Name";
+    	    	document.getElementById("city-error").innerHTML = "*Please Enter a Valid City Name";
     return false;
     }
     else{
-    	    	document.getElementById("city-error").innerHTML = "<img src='./correct.png' style='width: 20px; height: 20px;'>";
+    	    	document.getElementById("city-error").innerHTML = "";
 return true;
     }
 

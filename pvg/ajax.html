@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<fieldset>
+<legend>SIGN-IN</legend>
+<form method="post" action="http://192.168.121.187/first_year/dhruv/my_machau_api/login_demo.php">
+username: <input type="text" name="username" id="user">
+<br><br>
+password: <input type="password" name="password" id="pwd">
+<br><br>
+<button  name="SIGN-IN" onclick="loadDoc()">SIGN-IN</button> 
+</fieldset>
+</form>
+<script type="text/javascript">
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  
+   xhttp.open("POST", "http://192.168.121.187/first_year/dhruv/my_machau_api/login_demo.php", true);
+  var a=document.getElementById('user').value;
+  var b=document.getElementById('pwd').value;
+  var uri = "http://192.168.121.187/first_year/dhruv/my_machau_api/login_demo.php?username=" + a + "&password=" + b;
+var res = encodeURI(uri);
+  xhttp.send(res);
+ xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	var data = this.responseText;
+    	alert(data);
+    }
+     }
+
+}
+</script>
+</body>
+</html>
